@@ -3,6 +3,10 @@
 
 {% block content %}
 <main class="container">
+  <div class ='navegacao'>
+    <p>Navegação:</p>
+    <a href='http://127.0.0.1:8000/taglist'>LISA DE TAGS </a> 
+  </div>
   
   <form class="form-card" method="POST">
     {% csrf_token %}
@@ -17,6 +21,12 @@
       name="detalhes"
       placeholder="Digite o conteúdo..."
     ></textarea>
+    <input
+      class="form-card-tag"
+      type="text"
+      name="tag-input"
+      placeholder="Digite uma tag para sua anotação"
+    />
     <button class="btn" type="submit">Criar</button>
   </form>
 
@@ -34,6 +44,9 @@
       <h3 class="card-title">{{ note.title }}</h3>
       <div class="card-content">
           <p>{{note.content}}</p>
+      </div>
+      <div class='card-tag'>
+          <a class='tag-index' href='taglist/{{ note.tag }}'> {{ note.tag }} </a>
       </div>
   
       <form id="delete-note-{{ note.id }}" method='POST' action="/delete">
@@ -73,6 +86,12 @@
           name="detalhes"
           placeholder="Digite o conteúdo..."
         ></textarea>
+        <input
+        class="edit-form-card-tag"
+        type="text"
+        name="edit-tag-input"
+        placeholder="Tag"
+      />
         <button class="edit-btn-post" type="submit">Editar</button>
       </form>
     </div>
@@ -80,4 +99,5 @@
 
 
 </main>
+<script type="text/javascript" src="{% static 'notes/script/getit.js' %}"></script>
 {% endblock %}

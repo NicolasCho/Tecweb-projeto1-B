@@ -52,6 +52,18 @@ body {
   margin-right: 1rem;
 }
 
+.navegacao{
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+  margin-top: 1rem;
+  align-self: center;
+  font-size: xx-large;
+}
 
 .form-card{
   display: flex;
@@ -60,26 +72,30 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 40rem;
-  height: 8rem;
+  height: 10rem;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,.5);
   border-radius: 0.5rem;
   padding: 0.5rem 0.5rem 0.4rem 0.5rem;
 }
 
-input{
+.form-card-title{
   border: none;
   margin-top: 0.5rem;
   font-size: 1.5rem;
   padding-bottom: 1rem;
+  height: 1rem;
 }
 
-textarea{
+.autoresize{
   border: none;
   font-size: 1rem;
-  
+  height: 4rem;
 }
 
+
+
 .btn{
+  margin-top: 1rem;
   display: block;
   background-color: #f7d943;
   border: none;
@@ -123,6 +139,11 @@ textarea{
   color: #4c4c4c;
 }
 
+.card-tag{
+  margin-top: 2rem;
+  align-self: flex-end;
+}
+
 .btn-space{
   margin-top: 0rem;
   display: flex;
@@ -156,7 +177,7 @@ textarea{
 
 .edit-content{
   width: 500px;
-  height: 300px;
+  height: 350px;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -207,6 +228,8 @@ textarea{
   height: 2rem;  
   box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 }
+
+
 
 .texto{
   margin-left: 3rem;
@@ -261,6 +284,21 @@ textarea{
 }
 .card-rotation-11{
   transform: rotate(5deg);
+}
+
+/* ------------------------------------------------------------------------------------------------------------*/
+
+.tag-container{
+  display: flex;
+}
+
+.tag-list{
+  margin-top: 3rem;
+  margin-left: 5rem;
+}
+
+.tag-link{
+  font-size: larger;
 }
 
 

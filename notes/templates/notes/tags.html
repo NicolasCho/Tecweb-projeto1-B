@@ -1,0 +1,29 @@
+{% extends "notes/base.html" %}
+{% load static %}
+
+{% block content %}
+<main class="container">
+    <div class ='navegacao'>
+        <p>Navegação:</p>  
+        <a href='http://127.0.0.1:8000/'> PÁGINA PRINCIPAL </a>
+        <a href='http://127.0.0.1:8000/taglist'> LISTA DE TAGS </a>
+    </div>
+
+    <h1> Notas com a tag: {{tag.tag_str}} </h1>
+
+    <div class="card-container">
+        {% for note in notes %}
+        <div class="card">
+            
+          <h3 class="card-title">{{ note.title }}</h3>
+          <div class="card-content">
+              <p>{{note.content}}</p>
+          </div>
+        </div>
+    
+        {% endfor %}
+    </div>
+
+</main>
+<script type="text/javascript" src="{% static 'notes/script/getit_tags.js' %}"></script>
+{% endblock %}
