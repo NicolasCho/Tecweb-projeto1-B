@@ -5,8 +5,8 @@
 <main class="container">
     <div class ='navegacao'>
         <p>Navegação:</p>  
-        <a href=''> PÁGINA PRINCIPAL </a>
-        <a href='taglist'> LISTA DE TAGS </a>
+        <a href="{% url 'index' %}"> PÁGINA PRINCIPAL </a>
+        <a href="{% url 'taglist' %}"> LISTA DE TAGS </a>
     </div>
 
     <h1> Notas com a tag: {{tag.tag_str}} </h1>
